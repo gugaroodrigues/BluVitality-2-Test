@@ -5,7 +5,7 @@
 --%>
 
 <table class="table dataTable" id="tabela-funcionario">
-    <thead  class="table-dark">
+    <thead  class="">
         <tr>
             <th scope="col">Nome</th>
             <th scope="col">Função</th>

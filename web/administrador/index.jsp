@@ -35,7 +35,7 @@
         <div class="divider"></div>
         <div id="InicioADM" class="col s12 container">
             <div class="col s6">
-                <div class="row teal darken-2"> 
+                <div class="row "> 
                     <h5>
                         Seja bem vindo
                     </h5> 
@@ -48,7 +48,7 @@
 
         <div id="listapaciente" class="col s12 scrollBarOnDiv container">
             <div class="col s12">
-                <%@include file="table-pacientes.jsp" %>
+                <%@include file="tabela-usuarios.jsp" %>
             </div>
         </div>
         <div id="lisfuncionarios" class="col s12 container">
@@ -62,7 +62,7 @@
              %>-->
 
             <div class="col s6">
-                <div class="row teal darken-2"> 
+                <div class="row teal lighten-3"> 
                     <span class="flow-text ">Quartos</span><br>
                     <a class="waves-effect waves-light btn-small right" id="btnRemove">Nova Ala</a>
                     <a href="#" class="waves-effect waves-light btn-small right-align " id="btnAdd">Adicionar</a>
@@ -113,5 +113,6 @@
 <!--<div id="loading" style="display: block">
     <i class="material-icons right ld ld-cycle" id="loading">loop</i>
 </div>-->
+<script type="text/javascript" src="js-adm/administracao.js"></script>
 
 <%@include file="../model/footer.jsp" %> 

@@ -7,17 +7,17 @@
 
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="form-pendencias" >
         <div class="row">
             <div class="input-field col s6">
                 <input id="input_text" type="text" data-length="10">
-                <label for="input_text">Nome da Pendência</label>
+                <label for="input_text1">Nome da Pendência</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s8">
                 <input type="text" class="datepicker" id="tempoPendencia">
-                <label for="tempoPendencia">Tempo Limite</label>
+                <label for="tempoPendencia1">Tempo Limite</label>
             </div>
         </div>
         <div class="row">
@@ -26,6 +26,6 @@
                 <label for="textarea2">Descrição</label>
             </div>
         </div>
-        <a class="waves-effect waves-light btn"><i class="material-icons left">event</i>button</a>
+        <a class="waves-effect waves-light btn" id="btnPendencia"><i class="material-icons left">event</i>button</a>
     </form>
 </div>

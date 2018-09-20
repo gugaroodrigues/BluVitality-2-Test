@@ -63,6 +63,8 @@
 <script type="text/javascript" src="../resources/js/materialize.min.js"></script>
 <script type="text/javascript" src="../resources/js/google-platform.js"></script>
 <script type="text/javascript" src="../resources/js/custom.js"></script>
+<script type="text/javascript" src="../administrador/js-adm/vavidacao.js"></script>
+<script type="text/javascript" src="../administrador/js-adm/administracao.js"></script>
 <script type="text/javascript" src="../resources/js/select2.min.js"></script>
 <script type="text/javascript" src="../resources/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="../resources/bootstrap/js/bootstrap.min.js"></script>

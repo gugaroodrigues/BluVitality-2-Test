@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -245,7 +246,44 @@ public class UsuariosDAO {
         return null;
     }
 
-    int obterTodos(UsuariosBean usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public  List<HashMap<String, Object>> obterTodosParaDatatable(){
+        List<HashMap<String, Object>> usuarios = new ArrayList<>();
+        String sql = "SELECT * FROM usuarios";
+        
+        try {
+            Statement st = Conexao.abrirConexao().createStatement();
+            st.execute(sql);
+            ResultSet resultSet = st.getResultSet();
+           
+            while (resultSet.next()) {
+                HashMap<String, Object> usuario = new HashMap<>();
+                usuario.put("id", resultSet.getInt("id"));
+                usuario.put("nome", resultSet.getString("nome"));
+                usuario.put("idade", resultSet.getByte("idade"));
+                usuario.put("estado_civil", resultSet.getString("estado_civil"));
+                usuario.put("sexo", resultSet.getString("sexo").charAt(0));
+                usuario.put("login", resultSet.getString("login"));
+                usuario.put("senha", resultSet.getString("senha"));
+                usuario.put("cpf", resultSet.getString("cpf"));
+                usuario.put("rg", resultSet.getString("rg"));
+                usuario.put("telefone", resultSet.getString("telefone"));
+                usuario.put("email",resultSet.getString("email"));
+                usuario.put("endereco",resultSet.getString("endereco"));
+                usuario.put("complemento",resultSet.getString("complemento"));
+                usuario.put("cidade", resultSet.getString("cidade"));
+                usuario.put("uf", resultSet.getString("uf"));
+                usuario.put("naturalidade", resultSet.getString("naturalidade"));
+                usuario.put("data_nascimento", resultSet.getDate("data_nascimento"));
+                usuario.put("nome_fic", resultSet.getString("nome_fic"));
+                usuario.put("tipo_sanguineo", resultSet.getString("tipo_sanguineo"));
+                usuario.put("contato_emergencia", resultSet.getString("contato_emergencia"));
+                usuario.put("convenio", resultSet.getString("convenio"));
+                usuarios.add(usuario);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally{
+            Conexao.fecharConexao();
+        }return usuarios;
     }
 }
